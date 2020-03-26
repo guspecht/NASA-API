@@ -1,0 +1,24 @@
+<section id="news" class="pt-5">
+  <div class="container">
+    <h1 class="text-center text-white title"> NEWS </h1>
+    <div class="row" *ngIf="news">
+      <div class="col-md-12 mb-5">
+        <h1 class="text-center text-white" >{{ news.title }}</h1>
+      </div>
+      <div class="col-md-12" *ngIf="news.media_type === 'image'">
+        <img [src]="news.url"  class="rounded mx-auto d-block img-fluid">
+      </div>
+      <div class="col-md-12 embed-responsive embed-responsive-16by9 mb-5" *ngIf="news.media_type === 'video'">
+          <iframe [src]="videoUrl" class="embed-responsive-item"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="col-md-12 mb-5">
+        <p class="text-center text-white"> {{ news.explanation }} </p>
+      </div>
+    </div>
+    <div class="row text-center text-white" *ngIf="!news">
+      <div class="col-md-12 loading">
+        <p>We are loading... Please Wait.</p>
+      </div>
+    </div>
+  </div>
+</section>

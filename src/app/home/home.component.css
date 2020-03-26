@@ -1,0 +1,69 @@
+section#home {
+  background: #000;
+  height: 80vh;
+}
+
+
+h1{
+  font-size: 7vw;
+  margin-top: 300px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 20px;
+}
+
+/* ------------------- */
+
+
+#showUp {
+  font-size: 0px;
+  -webkit-animation: showUp 2.5s forwards;
+  -webkit-animation-delay: 0.5s;
+  animation: showUp 2.5s forwards;
+  animation-delay: 0.5s;
+}
+
+@-webkit-keyframes showUp {
+  100% { font-size: 7vw; }
+}
+
+@keyframes showUp {
+  100% { font-size: 7vw; }
+}
+
+
+#fadein {
+  color: #000;
+  -webkit-animation: fadein 5.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: fadein 5.5s forwards;
+  animation-delay: 2s;
+}
+
+@-webkit-keyframes fadein {
+  100% { color: white; }
+}
+
+@keyframes fadein {
+  100% { color: white; }
+}
+
+
+
+@media only screen and (max-width: 500px) {
+
+  h1{
+    margin-top: 200px;
+
+  }
+
+  @-webkit-keyframes showUp {
+    100% { font-size: 14vw; }
+  }
+
+  @keyframes showUp {
+    100% { font-size: 14vw; }
+  }
+}
